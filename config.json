@@ -58,6 +58,20 @@
           "type": "csv"
         }
       ]
+    },
+    {
+      "id": "building-rest-apis-fastapi",
+      "title": "Building REST APIs with FastAPI",
+      "description": "Create REST API endpoints in FastAPI, validate request data with Pydantic, and implement in-memory CRUD operations.",
+      "path": "assignments/building-rest-apis-fastapi",
+      "dueDate": "2026-11-16",
+      "attachments": [
+        {
+          "name": "FastAPI Starter Code",
+          "file": "main.py",
+          "type": "python"
+        }
+      ]
     }
   ]
 }
