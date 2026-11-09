@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Class Book Catalog</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        line-height: 1.5;
+        margin: 2rem auto;
+        max-width: 42rem;
+        padding: 0 1rem;
+      }
+
+      form {
+        display: grid;
+        gap: 0.75rem;
+        max-width: 24rem;
+      }
+
+      input,
+      button {
+        font: inherit;
+        padding: 0.4rem;
+      }
+
+      li {
+        margin-block: 0.75rem;
+      }
+
+      li button {
+        margin-left: 0.5rem;
+      }
+
+      #message {
+        min-height: 1.5em;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Class Book Catalog</h1>
+
+      <form id="book-form">
+        <label for="title">Book title</label>
+        <input id="title" name="title" required>
+
+        <label for="author">Author</label>
+        <input id="author" name="author" required>
+
+        <button type="submit">Add book</button>
+      </form>
+
+      <p id="message" role="status" aria-live="polite"></p>
+      <h2>Books</h2>
+      <ul id="book-list"></ul>
+    </main>
+
+    <script>
+      const API_URL = "http://127.0.0.1:8000";
+      const bookForm = document.querySelector("#book-form");
+      const bookList = document.querySelector("#book-list");
+      const message = document.querySelector("#message");
+
+      function showMessage(text) {
+        message.textContent = text;
+      }
+
+      async function loadBooks() {
+        // TODO: Request GET /books, check the response, and display the books.
+      }
+
+      function renderBooks(books) {
+        bookList.replaceChildren();
+
+        // TODO: Create a list item for each book with Edit and Delete buttons.
+        // Use textContent for book details, then connect each button to its API action.
+      }
+
+      bookForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        // TODO: Send POST /books with the form values, clear the form,
+        // and reload the list. Show an error message if the request fails.
+      });
+
+      async function updateBook(book) {
+        // TODO: Ask for updated title and author, send PUT /books/{book.id},
+        // and reload the list. Do nothing if the user cancels either prompt.
+      }
+
+      async function deleteBook(book) {
+        // TODO: Send DELETE /books/{book.id} and reload the list.
+      }
+
+      loadBooks();
+    </script>
+  </body>
+</html>

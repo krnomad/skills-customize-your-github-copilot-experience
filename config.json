@@ -72,6 +72,20 @@
           "type": "python"
         }
       ]
+    },
+    {
+      "id": "connecting-web-apps-fastapi",
+      "title": "Connecting a Web App to FastAPI",
+      "description": "Build a browser-based book catalog with JavaScript fetch, form validation, and error handling.",
+      "path": "assignments/connecting-web-apps-fastapi",
+      "dueDate": "2026-11-16",
+      "attachments": [
+        {
+          "name": "HTML Starter Page",
+          "file": "starter-code.html",
+          "type": "html"
+        }
+      ]
     }
   ]
 }
